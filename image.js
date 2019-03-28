@@ -106,7 +106,7 @@
                         ob.options.width = ob.options.height / ob.aspectRatio;
                     }
                 }
-                ob.canvas = new Canvas(ob.image.width, ob.image.height);
+                ob.canvas = Canvas.createCanvas(ob.image.width, ob.image.height);
                 ob.context = ob.canvas.getContext('2d');
                 ob.context.drawImage(
                     ob.image, 0, 0, ob.image.width, ob.image.height
@@ -141,7 +141,7 @@
                             return newImage;
                         },
                         canvas : function(width, height){
-                            var canvas = new Canvas(width, height);
+                            var canvas = Canvas.createCanvas(width, height);
                             return canvas;
                         }
                     },
